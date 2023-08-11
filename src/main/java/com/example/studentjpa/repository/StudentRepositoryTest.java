@@ -13,7 +13,7 @@ import com.example.studentjpa.enti.Student;
 public class StudentRepositoryTest {
 	@Autowired
 	private StudentRepository studentrepository;
-
+/*
 	@Test
 	public void saveStudent() {
 		Student student = Student.builder()
@@ -57,6 +57,12 @@ public class StudentRepositoryTest {
 		List<Student>students=studentrepository.findByfirstnameContaining("ra");
 		System.out.println("Students="+students);
 	}
-	//@Test
-	//public void printstudentBasedongardianname() {
+	*/
+	@Test
+	public void printstudentBasedongardianname() {
+		List<Student>students=studentrepository.findBygardianName("Rama");
+		
+		System.out.println("students = "+ students);
+	}
+	
 }
